@@ -6,10 +6,12 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "wdio": "wdio run test/wdio.conf.ts",
-        "report": "allure generate allure-results --clean"
+        "report": "allure generate allure-results --clean",
+        "fix-memory-limit": "cross-env LIMIT=4096 increase-memory-limit"
     },
     "author": "",
     "license": "ISC",
+    
     "devDependencies": {
         "@wdio/allure-reporter": "^7.30.1",
         "@wdio/cli": "^7.20.1",
