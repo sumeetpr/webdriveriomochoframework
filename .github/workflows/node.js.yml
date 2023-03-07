@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubantu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -21,8 +21,6 @@ jobs:
       with:
         node-version: 16.3.0
         cache: 'npm'
-    - run: |
-        export NODE_OPTIONS="--max_old_space_size=4096"
 
     - run: npm install
     - run: npm run wdio
