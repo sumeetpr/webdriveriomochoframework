@@ -21,11 +21,12 @@ jobs:
       with:
         node-version: 16.3.0
         cache: 'npm'
-  
+    - run: |
+        export NODE_OPTIONS="--max_old_space_size=4096"
+
     - run: npm install
     - run: npm run wdio
     - run: npm run report
-    - run: ls -lrt
 
     - name: upload artifacts
       uses: actions/upload-artifact@v2
