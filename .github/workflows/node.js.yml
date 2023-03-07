@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: "Nothing is impossible"
-      env:
+    - run:
        NODE_OPTIONS: "--max_old_space_size=4096"
     - uses: actions/checkout@v3
     - name: SetUp NodeJs
